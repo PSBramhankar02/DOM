@@ -126,7 +126,7 @@ function createUI() {
 
   createJSONGenerateButton(container);
 
-  createToggleButton(container); // Create the toggle button here
+
 
   lineBreak(container);
 
@@ -151,7 +151,8 @@ function createUI() {
   jsonContainer.appendChild(jsonInputField);
 
   // Button to load the JSON data
-  const LOAD = createLoadJSONButton(container);
+   createLoadJSONButton(container);
+   createToggleButton(container); 
 }
 
 var table;
@@ -275,18 +276,36 @@ function generateJSON() {
 // Function to load JSON data
 function loadJSONFunction() {
     const jsonString = document.getElementById("jsonInput").value;
+    console.log("Received JSON Input:", jsonString); // Add this line to debug the input
+  
+    // Check if the input is empty or not
+    if (!jsonString.trim()) {
+      alert("Input is empty. Please provide valid JSON data.");
+      return;
+    }
+  
     try {
-      candidates = JSON.parse(jsonString);
+      candidates = JSON.parse(jsonString); // Try parsing the input
+      console.log("Parsed candidates:", candidates); // Debug log
+  
+      // Check if the parsed object is an array (optional, but good practice)
+      if (!Array.isArray(candidates)) {
+        alert("The JSON input should be an array of objects.");
+        return;
+      }
+  
       const layout = document.querySelector('input[name="layout"]:checked').value;
       if (layout === "table") {
-        setValueInTable(table);
+        setValueInTable(table); // Update the table layout with new data
       } else {
-        createDivLayout();
+        createDivLayout(); // Update the div layout with new data
       }
     } catch (e) {
-      alert("Invalid JSON format");
+      console.error("Error parsing JSON:", e); // Log the error
+      alert("Invalid JSON format. Please check the syntax.");
     }
   }
+  
 
 // Function to toggle bullet points
 function toggleBulletPoints() {

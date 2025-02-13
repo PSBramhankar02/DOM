@@ -88,7 +88,7 @@
 }
 
 #genetate-button {
-  padding: 2px;
+  padding: 4px;
   margin-left: 100px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -131,7 +131,7 @@
 }
 #toggleButton {
     margin-top: 10px;
-    margin-left: 100px;
+    margin-left: 400px;
     padding: 4px;
     border-radius: 5px;
   }
