@@ -1,0 +1,202 @@
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #e7dede;
+  /* padding:1px; */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+  /* Default container styling */
+.displaycontainer {
+    display: flex;
+    background-color: #fefcfc;
+    height: 300px;
+    width: 600px;
+    border: 1px solid black;
+    margin-left: 100px;
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .displaycontainer {
+      width: 100%;  /* Adjust container to take up 100% width on smaller screens */
+      margin-left: 0;  /* Remove left margin for smaller screens */
+    }
+  }
+  
+  /* Optional: You can also tweak for extra small devices */
+  @media (max-width: 480px) {
+    .displaycontainer {
+      height: 250px;  /* Optionally adjust height on smaller screens */
+    }
+  }
+  
+
+
+
+
+
+
+
+.header {
+  text-align: center;
+  /* background-color: bisque; */
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+.radio-layout {
+  margin-left: 100px;
+  font-size: large;
+}
+
+.candidate {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field {
+  padding: 4px;
+  margin-left: 5px;
+  margin-top: 30px;
+}
+
+#firstNameId {
+  padding: 4px;
+  margin-left: 300px;
+  margin-top: 30px;
+}
+#lastNameId{
+    padding: 4px;
+    margin-left: 10px;
+    margin-top: 30px; 
+}
+#addButtonId {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-left: 15px;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.candidate:nth-child(even) {
+  background-color: gray;
+}
+
+#genetate-button {
+  padding: 2px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.candidate:nth-child(odd) {
+  background-color: yellow;
+}
+
+.candidate button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.candidate button.delete {
+  background-color: red;
+}
+
+.candidate button.add {
+  background-color: green;
+}
+
+.candidate button.toggle {
+  background-color: blue;
+}
+
+.candidate .username {
+  flex-grow: 1;
+}
+
+#canditate-table {
+    align-items: center;
+    text-align: center  ;
+
+    width: 41.5%;
+    margin-left: 150px;
+    margin-bottom: 40px;
+}
+#toggleButton {
+    margin-top: 10px;
+    margin-left: 100px;
+    padding: 4px;
+    border-radius: 5px;
+  }
+
+  .candidate .username {
+    flex-grow: 1;
+  }
+
+  /* Table-specific styles */
+  .table-row-even {
+    background-color: gray;
+  }
+
+  .table-row-odd {
+    background-color: yellow;
+  }
+
+  .json-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  #jsonOutput {
+    flex: 1;  /* Take as much space as possible */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    min-height: 100px;  /* Ensure it has some height */
+    max-height: 300px;  /* Limit the maximum height */
+    overflow-y: auto;  /* Enable vertical scrolling when content overflows */
+    white-space: pre-wrap;  /* Ensure the JSON content wraps correctly if it's too long */
+  }
+  
+  #jsonInput {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    min-height: 100px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+  }
+  
+  #canditate-table {
+  margin: 0 auto;  /* This will horizontally center the table */
+  border-collapse: collapse;  /* Optional: Makes the table borders collapse for a cleaner look */
+}
+
+#listContainer {
+  display: flex;
+  justify-content: center;  /* Horizontally center the table inside the container */
+  align-items: center;  /* Vertically center the table inside the container (if needed) */
+  height: 100%;  /* Make sure the parent container takes up full height (optional) */
+}
+
+table {
+  width: 80%;  /* Optionally set the width of the table (e.g., 80% of the container) */
+  max-width: 100%;  /* Ensure the table doesn't overflow the container */
+}
+
+#loadjson-button {
+    padding: 4px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+  
