@@ -1,0 +1,23 @@
+// Inside the onload function or wherever you're creating elements dynamically:
+
+// Create the user list container
+const userListContainer = document.createElement('div');
+userListContainer.classList.add('user-list'); // Adding the CSS class dynamically
+document.body.appendChild(userListContainer);
+
+
+
+
+
+// Render the list (for example, adding users)
+userList.forEach((user, index) => {
+    let div = document.createElement('div');
+    div.classList.add('user-item'); // Add the class for styling
+    div.innerHTML = `
+        <span>${user.fullName}</span>
+        <span class="remove-btn">X</span> <!-- Remove button with styling -->
+    `;
+    div.onclick = () => promptFullName(index); // Prompt on click
+    div.querySelector('.remove-btn').onclick = () => deleteUser(index); // Delete user
+    userListContainer.appendChild(div); // Add to the container
+});
